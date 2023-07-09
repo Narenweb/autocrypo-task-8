@@ -1,0 +1,18 @@
+@mixin btn() {
+    border-radius: 8px 0px;
+    background-color: $secondary-color;
+    box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+    font-weight: bold;
+    color: $light-color;
+    text-decoration: none;
+    line-height: 2.13;
+
+    &:hover {
+        box-shadow: none;
+        transform: none;
+        outline: 2px solid $secondary-color;
+        transition: all .1s ease-out;
+        background-color: transparent;
+        color: $secondary-color;
+    }
+}

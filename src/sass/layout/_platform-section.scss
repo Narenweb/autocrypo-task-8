@@ -1,0 +1,36 @@
+.platform-section {
+   margin-top: 80px;
+    h2 {
+        font-size: $base-font-size;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color:$dark-blue;
+    }
+
+    .platform-images {
+        margin-top: 50px;
+
+        img {
+            width: 158px;
+            height: 41px;
+            object-fit: contain;    
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .platform-section{
+        h2{
+            font-size: 20px;
+        }
+        .platform-images {
+            flex-direction: column;
+            img{
+                margin-top: 25px;
+            }
+        }
+    }
+   
+
+
+}

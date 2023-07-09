@@ -1,0 +1,16 @@
+.package {
+    margin-top: 70px;
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1.6;
+        color: #32325c;
+    }
+}
+@media (max-width:480px){
+    .package{
+        h2{
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+/* -----------Footer Section----------- */
+footer {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    color: $primary-text-color;
+
+    p {
+        font-size: $base-font-size;
+        line-height: 2;
+    }
+
+    ul {
+        margin-left: 50px;
+
+        & ::after {
+            content: '/';
+            position: relative;
+            display: inline;
+            left: 20px;
+
+        }
+
+        li {
+            margin: 30px 40px 80px 0;
+
+            &:hover {
+                color: $secondary-color;
+            }
+
+            &:last-child::after {
+                content: '';
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+    }
+}
+@media (max-width:480px){
+    footer{
+        margin: 100px 0 50px;
+        font-size: 19px;
+        ul{
+            flex-direction: column;
+            margin: 30px 0 0;
+            & ::after {
+                content: ' ';
+            }
+            li{
+                margin: 20px 0 0 0;
+            }
+
+
+        }
+    }
+}

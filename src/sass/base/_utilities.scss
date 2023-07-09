@@ -1,0 +1,20 @@
+.container{
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+.text-center {
+    text-align: center;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-space{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

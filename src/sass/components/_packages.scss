@@ -1,0 +1,99 @@
+.plans {
+    margin-top: 64px;
+    display: flex;
+
+    .card {
+        padding-bottom: 40px;
+        width: 378px;
+        border: 3px solid transparent;
+
+        &:hover {
+            box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+            background-color: $light-color;
+            transition: background-color 0.6s ease-out, box-shadow 0.6s ease-out;
+            border-top-color: #0a8aff;
+        }
+
+        .card-body {
+            padding: 57px 86px;
+
+            h4 {
+
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1.33;
+                letter-spacing: 0.27px;
+                color: #32325c
+            }
+
+            h3 {
+                font-weight: normal;
+                margin-top: 31px;
+                font-size: 72px;
+                line-height: 0.89;
+                color: $secondary-color;
+            }
+
+            p {
+                font-size: $base-font-size;
+                line-height: 2;
+                letter-spacing: 0.18px;
+                color: $primary-text-color;
+
+                &:nth-of-type(1) {
+                    margin-top: 13px;
+                }
+
+                &:nth-of-type(2) {
+                    margin-top: 60px;
+                }
+
+                &:nth-of-type(3) {
+                    margin-top: 15px;
+                }
+
+                &:nth-of-type(4) {
+                    margin-top: 17px;
+                }
+            }
+
+        }
+
+        .plan-btn {
+            line-height: 6;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .plans {
+        margin-top: 30px;
+        flex-direction: column;
+
+        .card {
+            width: 100%;
+
+            .card-body {
+                padding: 57px 0px;
+
+                h3 {
+                    margin-top: 20px;
+                    font-size: 55px;
+                }
+
+                p {  &:nth-of-type(1),
+                    &:nth-of-type(2),
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .plan-btn {
+                line-height: 0;
+            }
+        }
+    }
+
+
+}

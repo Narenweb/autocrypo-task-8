@@ -1,0 +1,67 @@
+.btn-sm {
+    @include btn;
+    padding: 10px 24.5px 10px 26.5px;
+}
+.btn-md{
+        @include btn;
+        padding: 20px 46.5px 18px;
+        line-height: 8.13;
+}
+.btn-lg{
+        @include btn;
+        padding: 21px 42px 20px;
+}
+.package-button {
+    margin-top: 60px;
+
+    a {
+        padding: 21px 33px 20px 37px;
+        border-radius: 5px;
+        border: solid 1px #aefdd9;
+        font-size: $base-font-size;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: $secondary-color; 
+
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:last-child {
+            background-color:$tertiary-color;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        &:hover {
+            background-color: $secondary-color;
+            color: $light-color;
+            transition: all 200ms ease-out;
+        }
+    }
+}
+@media (max-width:480px) {
+    .btn-md{
+        margin-top: 0;
+    }
+    .package-button{
+        width: 100%;
+        flex-direction: column;
+        a{
+            font-size: 12px;
+            &:first-child{
+                padding: 21px 100px 20px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            &:last-child{
+                margin-top: 10px;
+                padding: 21px 43px 20px;
+                // width: 100%;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+        }
+    }
+}

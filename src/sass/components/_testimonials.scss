@@ -1,0 +1,101 @@
+.card-container {
+    position: relative;
+    height: calc(1200px - 600px);
+    z-index: 1;
+    margin: 120px 0px 15px 350px;
+    display: flex;
+    width: 2300px;
+    overflow: hidden;
+    transition: all 0.6s ease;
+    // transform: translateX(-1400px);
+    
+    .active {
+        &:nth-child(1) {
+            color: $light-color;
+            border-radius: 6px;
+            backdrop-filter: blur(10px);
+            box-shadow: 12px 12px 20px 0 rgba(31, 219, 132, 0.5);
+            background-color: $secondary-color;
+        }
+
+        &::before {
+            content: url(https://i.ibb.co/sQ1XyJj/group-6.png);
+            width: 50px;
+            height: 50px;
+            transform: rotate(-1deg);
+        }
+    }
+
+    .card {
+        width: 300px;
+        height: 450px;
+        color:$primary-text-color;
+        padding: 50px 30px 46px;
+        display: flex;
+        flex-direction: column;
+        margin: 40px 60px 0 0;
+        background-color: $light-color;
+        border-radius: 6px;
+
+        .card-text {
+            font-size: $base-font-size;
+            line-height: 2;
+            font-weight: normal;
+            margin-top: 26px;
+        }
+
+        &:nth-of-type(1) {
+            h5 {
+                position: relative;
+                top: 28px;
+            }
+        }
+
+        &:nth-of-type(3) {
+            h5 {
+                position: relative;
+                top: 63px;
+
+            }
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            &::before {
+                content: url(https://i.ibb.co/g3wgxgY/group-7.png);
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+    }
+}
+@media (max-width:480px){
+        .card-container{
+            margin: 50px 0px 15px 50px;      
+            .card{
+                margin-top: 70px;
+                width: 275px;
+                height: 400px;
+                padding: 30px 25px 30px;
+                &:nth-child(2),&:last-child{
+                    display: none
+                }
+
+                .card-text {
+                    margin-top: 10px;
+                }
+            }
+            
+        }
+    
+ }
+ @media (max-width:390px){
+    .card-container{
+        margin-left:25px;      
+    }
+ }
+ @media (max-width:325px){
+    .card-container{
+        margin-left:6px;      
+    }
+ }

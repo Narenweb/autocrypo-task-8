@@ -1,0 +1,70 @@
+/* -----------Hero Section----------- */
+
+
+.hero {
+    width: 100%;
+    height: 723px;
+    background-color: $primary-color;
+
+    .container {
+        .hero-content-wrapper {
+
+            h1 {
+                width: 512px;
+                font-size: 48px;
+                font-weight: bold;
+                color: $light-color;
+            }
+
+            p {
+                width: 553px;
+                margin-top: 40px;
+                font-size: $base-font-size;
+                line-height: 2;
+                color: $light-color;
+            }
+        }
+
+        img {
+            max-height: 600px;
+            margin-top: 120px;
+            object-fit: contain;
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .hero {
+        height: 850px;
+        .container {
+            flex-direction: column;
+            .hero-content-wrapper {
+                width: 100%;
+                text-align: center;
+                h1 {
+                   width: 90%;
+                    margin: 120px auto 0;
+                    font-size: 30px;
+                    text-align: center;  
+                }
+                p{
+                    margin:20px auto 0;
+                    text-align: center;
+                    width: 100%;
+                    font-size: 14px;
+                }
+               
+            }
+            img {
+                max-height: 440px;
+                position: relative;
+                bottom: 130px;
+            }
+            .img-hidden{
+                z-index: -1;
+            }
+        }
+    }
+
+
+}
