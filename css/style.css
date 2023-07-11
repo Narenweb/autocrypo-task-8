@@ -374,7 +374,7 @@ a {
     margin-top: 10px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .card-container {
     width: 500px;
     position: relative;
@@ -532,10 +532,10 @@ header .navbar .nav-last li:nth-child(1) {
     font-size: 25px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 391px) {
   .active {
     position: relative;
-    right: 25px;
+    right: 20px;
   }
   .active::before {
     width: 25px;
@@ -550,6 +550,7 @@ header .navbar .nav-last li:nth-child(1) {
   }
   .nav-active .nav-center li a {
     left: 0px;
+    right: 20px;
   }
 }
 @media (min-width: 511px) and (max-width: 769px) {

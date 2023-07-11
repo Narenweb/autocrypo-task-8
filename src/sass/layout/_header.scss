@@ -142,10 +142,10 @@ header {
 
 }
 
-@media (max-width:350px) {
+@include breakpoints(map-get($breakpoints,"viewport-xsm")) {
     .active {
         position: relative;
-        right: 25px;
+        right: 20px;
 
         &::before {
             width: 25px;
@@ -167,6 +167,7 @@ header {
             li {
                 a {
                     left: 0px;
+                    right: 20px;
                 }
             }
         }
