@@ -65,7 +65,7 @@
     }
 }
 
-@media screen and (max-width:480px) {
+@include breakpoints(map-get($breakpoints,"viewport-sm"))  {
     .plans {
         margin-top: 30px;
         flex-direction: column;
@@ -96,4 +96,55 @@
     }
 
 
+}
+@include breakpoints(map-get($breakpoints,"viewport-md"))  {
+    .plans {
+        margin-top: 30px;
+        flex-direction: column;
+
+        .card {
+            width: 100%;
+
+            .card-body {
+                padding: 57px 0px;
+
+                h3 {
+                    margin-top: 20px;
+                    font-size: 55px;
+                }
+
+                p {  &:nth-of-type(1),
+                    &:nth-of-type(2),
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .plan-btn {
+                line-height: 0;
+            }
+        }
+    }
+
+
+}
+@media (max-width:1072px) {
+    .plans{
+        .card{
+            .card-body {
+                padding: 57px 0px;
+
+
+                p {  &:nth-of-type(1),
+                    &:nth-of-type(2),
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    
 }

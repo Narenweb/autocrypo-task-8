@@ -7,7 +7,14 @@
         color: #32325c;
     }
 }
-@media (max-width:480px){
+@include breakpoints(map-get($breakpoints,"viewport-sm")) {
+    .package{
+        h2{
+            font-size: 24px;
+        }
+    }
+}
+@include breakpoints(map-get($breakpoints,"viewport-md")) {
     .package{
         h2{
             font-size: 24px;

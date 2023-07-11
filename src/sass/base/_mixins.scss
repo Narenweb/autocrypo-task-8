@@ -1,4 +1,4 @@
-@mixin btn() {
+@mixin btn($padding) {
     border-radius: 8px 0px;
     background-color: $secondary-color;
     box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
@@ -6,6 +6,7 @@
     color: $light-color;
     text-decoration: none;
     line-height: 2.13;
+    padding:$padding;
 
     &:hover {
         box-shadow: none;
@@ -14,5 +15,19 @@
         transition: all .1s ease-out;
         background-color: transparent;
         color: $secondary-color;
+    }
+}
+
+$breakpoints:(
+    "viewport-xsm":390px,
+    "viewport-sm":480px,
+    "viewport-md":769px,
+    "viewport-lg":930px,
+    "viewport-xl":1070px,
+);
+
+@mixin breakpoints($get){
+    @media (max-width:$get){
+    @content;
     }
 }

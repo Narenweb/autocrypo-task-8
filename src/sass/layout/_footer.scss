@@ -58,3 +58,21 @@ footer {
         }
     }
 }
+@media (max-width:769px){
+    footer{
+        margin: 100px 0 50px;
+        font-size: 19px;
+        ul{
+            flex-direction: column;
+            margin: 30px 0 0;
+            & ::after {
+                content: ' ';
+            }
+            li{
+                margin: 20px 0 0 0;
+            }
+
+
+        }
+    }
+}

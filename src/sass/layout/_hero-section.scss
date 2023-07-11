@@ -33,7 +33,7 @@
     }
 }
 
-@media (max-width:480px) {
+@include breakpoints(map-get($breakpoints,"viewport-sm")) {
     .hero {
         height: 850px;
         .container {
@@ -43,7 +43,7 @@
                 text-align: center;
                 h1 {
                    width: 90%;
-                    margin: 120px auto 0;
+                    margin: 0 auto 0;
                     font-size: 30px;
                     text-align: center;  
                 }
@@ -66,5 +66,64 @@
         }
     }
 
-
+}
+@include breakpoints(map-get($breakpoints,"viewport-md")) {
+    .hero {
+        height: 850px;
+        .container {
+            flex-direction: column;
+            .hero-content-wrapper {
+                width: 100%;
+                text-align: center;
+                h1 {
+                   width: 90%;
+                    margin: 50px auto 0;
+                    font-size: 30px;
+                    text-align: center;  
+                }
+                p{
+                    margin:20px auto 0;
+                    text-align: center;
+                    width: 100%;
+                    font-size: 14px;
+                }
+               
+            }
+            img {
+                max-height: 440px;
+                position: relative;
+                bottom: 130px;
+            }
+            .img-hidden{
+                z-index: -1;
+            }
+        }
+    }
+}
+@include breakpoints(map-get($breakpoints,"viewport-lg")) {
+    .hero{
+        width:100%;
+        .container {
+            .hero-content-wrapper {
+                width: 100%;
+                margin-top: 100px;
+                h1 {
+                    width: 80%;
+                  
+                }
+                p{
+                    width: 80%;
+                }
+               
+            }
+            img {
+    height: 600px;
+                
+             
+            }
+            .img-hidden{
+                z-index: -1;
+            }
+        }
+    }
 }

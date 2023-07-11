@@ -18,7 +18,7 @@
     }
 }
 
-@media screen and (max-width:480px) {
+@include breakpoints(map-get($breakpoints,"viewport-sm"))  {
     .platform-section{
         h2{
             font-size: 20px;
@@ -30,7 +30,27 @@
             }
         }
     }
-   
+}
 
-
+@include breakpoints(map-get($breakpoints,"viewport-md"))  {
+    .platform-section{
+        h2{
+            font-size: 20px;
+        }
+        .platform-images {
+            flex-direction: column;
+            img{
+                margin-top: 25px;
+            }
+        }
+    }
+}
+@media (max-width:1072px) {
+    .platform-section {
+        .platform-images {
+            img{
+                width: 120px;
+            }
+        }
+    }
 }

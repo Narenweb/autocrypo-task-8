@@ -1,5 +1,5 @@
 .card-wrapper {
-    padding: 66px 25px 56px 35px;
+    padding: 66px 35px 56px;
     border-radius: 10px;
     box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
     position: relative;
@@ -31,7 +31,7 @@
         }
 
         p {
-            width: 300px;
+            // width: 300px;
             margin-top: 18px;
             font-size: $base-font-size;
             line-height: 2;
@@ -40,7 +40,27 @@
     }
 }
 
-@media screen and (max-width:480px){
+@include breakpoints(map-get($breakpoints,"viewport-sm")) {
+    .secure-section{
+        padding: 0;
+        .card-wrapper{
+            padding-top: 20px;
+            flex-direction: column;
+            text-align: center;
+            bottom: 0;
+            .card-icon{
+              margin: 20px auto 0;
+            }
+            .card-line{
+                width: 100px;
+                margin: 20px auto;
+               }
+       }
+       
+    }
+   
+ }
+ @include breakpoints(map-get($breakpoints,"viewport-md")) {
     .secure-section{
         padding: 0;
         .card-wrapper{
