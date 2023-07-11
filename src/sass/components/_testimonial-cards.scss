@@ -1,55 +1,30 @@
 .card-container {
- 
     position: relative;
-    right:0px;
+    right: 0px;
     height: calc(1200px - 600px);
     z-index: 1;
-    margin: 120px 0px 15px 250px;
+    margin: 120px 0px 15px 300px;
     display: flex;
     justify-content: flex-end;
-    // width: 1100px;
+    min-width: 2120px;
+    width: 100%;
     overflow: hidden;
     transition: all 0.6s ease;
-    // transform: translateX(-1400px);
-   width: 100%;
-   
-    .active {
-        &:nth-child(1) {
-            color: $light-color;
-            border-radius: 6px;
-            box-shadow: 12px 12px 20px 0 rgba(31, 219, 132, 0.5);
-            background-color: $secondary-color;
-        }
-
-        &::before {
-            content: url(https://i.ibb.co/sQ1XyJj/group-6.png);
-            width: 50px;
-            height: 50px;
-            transform: rotate(-1deg);
-        }
-    }
-
     .card {
         width: 420px;
         height: 400px;
-        color:$primary-text-color;
+        color: $primary-text-color;
         padding: 50px 30px 40px;
         display: flex;
         flex-direction: column;
         margin: 40px 10px 0 0;
         background-color: $light-color;
         border-radius: 6px;
-        &:nth-of-type(2){
-            position: relative;
-            left: 40px;
-        }
-        &:nth-of-type(3){
-            position: relative;
-            left: 80px;
-            h5 {
-                // position: relative;
-                // top:22px
-            }
+
+        &::before {
+            content: url(https://i.ibb.co/g3wgxgY/group-7.png);
+            width: 50px;
+            height: 50px;
         }
 
         .card-text {
@@ -59,111 +34,108 @@
             margin-top: 26px;
         }
 
-        &:nth-of-type(1) {
-            h5 {
-                position: relative;
-                // bottom: 0;
-            }
-        }
+    }
+    .active {
+        color: $light-color;
+        border-radius: 6px;
+        box-shadow: 12px 12px 20px 0 rgba(31, 219, 132, 0.5);
+        background-color: $secondary-color;
 
-        &:nth-child(2),
-        &:nth-child(3) {
-            &::before {
-                content: url(https://i.ibb.co/g3wgxgY/group-7.png);
-                width: 50px;
-                height: 50px;
-            }
+        &::before {
+            content: url(https://i.ibb.co/sQ1XyJj/group-6.png);
+            width: 50px;
+            height: 50px;
         }
-
     }
 }
-@include breakpoints(map-get($breakpoints,"viewport-sm")) {
-        .card-container{
-            justify-content: flex-start;
-            margin: 50px 0px 15px 80px;      
-            .card{
-                margin: 70px 0 0 80px;
-                width: 275px;
-                height: 400px;
-                padding: 30px 25px 30px;
-                &:nth-child(2),&:last-child{
-                    display: none
-                }
-                .card-text {
-                    margin-top: 10px;
-                }
-            }
-            
-        }
-    
- }
- @include breakpoints(map-get($breakpoints,"viewport-xsm")){
-    .card-container{
-        width: 500px;
-        position: relative;
-        right: 60px;     
-    }
- }
- @media (max-width:470px){
-    .card-container{
-        width: 500px;
-        margin-left:40px;      
-    }
- }
- @media (max-width:$viewport-xsm){
-    .card-container{
-        margin-left: 5px;
-        width: 300px;  
-        position: relative;
-        right: 60px;  
-    }
- }
- @media (min-width:$viewport-sm) and (max-width:$viewport-md){
-    .card-container{
-        margin: 50px 0px 15px 70px;   
-        
+
+@include breakpoints(map-get($breakpoints, "viewport-sm")) {
+    .slider::after {
         width: 100%;
-        .card{
-            margin-top: 70px;
-            width: 255px;
-            height: 380px;
+    }
+    .card-container {
+        justify-content: flex-start;
+        // margin: 50px 0px 15px 80px;
+        position: relative;
+        right: 10px;
+
+        .card {
+            width:370px;
             padding: 30px 25px 30px;
-        &:last-child{
-                display: none
-            }
 
             .card-text {
                 margin-top: 10px;
-                font-size: 15px;
             }
         }
+    }
+}
+
+@include breakpoints(map-get($breakpoints, "viewport-xsm")) {
+    .slider::after {
+        width: 100%;
+    }
+    .card-container {
+        width: 350px;
+        height: 400px;
+        position: relative;
+    }
+}
+
+@media (max-width:470px) {
+    .card-container {
+        width: 500px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width:$viewport-xsm) {
+    .slider::after {
+        width: 100%;
+    }
+    .card-container {
+        margin-left: 5px;
+        width: 300px;
+        position: relative;
+        right: 60px;
+    }
+}
+
+@media (min-width:$viewport-sm) and (max-width:$viewport-md) {
+    .slider::after {
+        width: 100%;
+    }
+    .card-container{
+        position: relative;
+        right: 150px;
+        justify-content: flex-start;
+        .card {
+                    margin-top: 70px;
+                    padding: 30px 25px 30px;
+                    display: flex;
+                    justify-content: center;
         
+                    .card-text {
+                        margin-top: 10px;
+                        // font-size: 15px;
+                    }
+                }
     }
- }
- @media (max-width:$viewport-md-1){
-    .card-container{
-        margin-left:10px;
-        .card{
-            width: 250px;
-            height: 380px;
-            padding: 30px 25px 30px;
-            .card-text {
-                margin-top: 10px;
-                font-size: 13px;
-            }
-        }
-    }
- }
+}
 
- @include breakpoints(map-get($breakpoints,"viewport-xl")){
-    .card-container{
-        .card{
+@media (max-width:$viewport-md-1) {
+    .slider::after {
+        width: 100%;
+    }
+}
+
+@include breakpoints(map-get($breakpoints, "viewport-xl")) {
+    .card-container {
+        .card {
             padding: 30px 25px 30px;
+            height: 370px;
             .card-text {
-                margin-top: 10px;
-                font-size: 13px;
+                margin-top: 10px; 
             }
         }
     }
- }
- 
+}

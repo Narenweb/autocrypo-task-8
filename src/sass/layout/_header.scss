@@ -103,7 +103,7 @@ header {
         }
     }
 
-    .active {
+    .active-close {
         &::before {
             width: 25px;
             transform: translate(0, 10px) rotate(-45deg);
@@ -114,7 +114,7 @@ header {
             transform: translate(0, -8px) rotate(45deg);
         }
 
-        &.active .bar {
+        &.active-close .bar {
             opacity: 0;
         }
     }
@@ -138,11 +138,18 @@ header {
 
     }
 }
+@media (max-width:$viewport-xsm) {
+ 
+    .active-close{
+        position: absolute;
+        right: 0;
+    }
+    
+}
 
 @include breakpoints(map-get($breakpoints,"viewport-xsm")) {
-    .active {
-        position: relative;
-        right: 20px;
+    
+    .active-close {
 
         &::before {
             width: 25px;
@@ -154,7 +161,7 @@ header {
             transform: translate(0, -8px) rotate(45deg);
         }
 
-        &.active .bar {
+        &.active-close .bar {
             opacity: 0;
         }
     }
@@ -217,7 +224,7 @@ header {
         }
     }
 
-    .active {
+    .active-close {
         &::before {
             width: 25px;
             transform: translate(0, 10px) rotate(-45deg);
@@ -228,7 +235,7 @@ header {
             transform: translate(0, -8px) rotate(45deg);
         }
 
-        &.active .bar {
+        &.active-close .bar {
             opacity: 0;
         }
     }
