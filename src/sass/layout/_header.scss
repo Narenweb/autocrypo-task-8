@@ -132,14 +132,11 @@ header {
                     left: 50px;
                     display: block;
                     font-size: 25px;
-
-
                 }
             }
         }
 
     }
-
 }
 
 @include breakpoints(map-get($breakpoints,"viewport-xsm")) {

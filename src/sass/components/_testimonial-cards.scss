@@ -6,17 +6,17 @@
     z-index: 1;
     margin: 120px 0px 15px 250px;
     display: flex;
+    justify-content: flex-end;
     // width: 1100px;
     overflow: hidden;
     transition: all 0.6s ease;
     // transform: translateX(-1400px);
-   width: 85%;
-    
+   width: 100%;
+   
     .active {
         &:nth-child(1) {
             color: $light-color;
             border-radius: 6px;
-            backdrop-filter: blur(10px);
             box-shadow: 12px 12px 20px 0 rgba(31, 219, 132, 0.5);
             background-color: $secondary-color;
         }
@@ -30,10 +30,10 @@
     }
 
     .card {
-
+        width: 420px;
         height: 400px;
         color:$primary-text-color;
-        padding: 50px 30px 46px;
+        padding: 50px 30px 40px;
         display: flex;
         flex-direction: column;
         margin: 40px 10px 0 0;
@@ -46,6 +46,10 @@
         &:nth-of-type(3){
             position: relative;
             left: 80px;
+            h5 {
+                // position: relative;
+                // top:22px
+            }
         }
 
         .card-text {
@@ -58,16 +62,10 @@
         &:nth-of-type(1) {
             h5 {
                 position: relative;
-                bottom: 0;
+                // bottom: 0;
             }
         }
 
-        &:nth-of-type(3) {
-            h5 {
-                position: relative;
-                bottom: 0;
-            }
-        }
         &:nth-child(2),
         &:nth-child(3) {
             &::before {
@@ -81,6 +79,7 @@
 }
 @include breakpoints(map-get($breakpoints,"viewport-sm")) {
         .card-container{
+            justify-content: flex-start;
             margin: 50px 0px 15px 80px;      
             .card{
                 margin: 70px 0 0 80px;
@@ -90,7 +89,6 @@
                 &:nth-child(2),&:last-child{
                     display: none
                 }
-
                 .card-text {
                     margin-top: 10px;
                 }

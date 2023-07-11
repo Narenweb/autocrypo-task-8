@@ -1,9 +1,11 @@
 // base imports
 @import '../base/typography';
-@import '../base/helpers';
-@import '../base/mixins';
 @import '../base/reset';
-@import '../base/variables';
+
+//Utils imports
+@import '../utils/helpers';
+@import '../utils/mixins';
+@import '../utils/variables';
 
 // components imports
 @import '../components/button.scss';
@@ -19,7 +21,3 @@
 @import '../layout/package-section.scss';
 @import '../layout/platform-section';
 @import '../layout/footer';
-
-
-
-
