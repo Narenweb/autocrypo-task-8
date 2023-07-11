@@ -374,8 +374,17 @@ a {
 }
 @media (max-width: 470px) {
   .card-container {
-    width: 500px;
+    position: relative;
+    right: 100px;
+    width: 400px;
+    height: 500px;
     margin-left: 40px;
+  }
+  .card-container .card {
+    margin-left: 90px;
+  }
+  .card-container .card:nth-child(3) {
+    margin-left: 180px;
   }
 }
 @media (max-width: 339px) {

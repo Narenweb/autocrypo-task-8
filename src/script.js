@@ -32,7 +32,7 @@ let number = 0;
 
 dots.forEach((dot, indexposition) => {
     dot.setAttribute("data-number", indexposition);
-    this.addEventListener('click', (e) => {
+    dot.addEventListener('click', (e) => {
         let DotNumber = e.target.dataset.number;
         if (DotNumber !== number) {
             const pixels = -(card + 60) * DotNumber;
