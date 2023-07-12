@@ -3,7 +3,7 @@
     right: 0px;
     height: calc(1200px - 600px);
     z-index: 1;
-    margin: 120px 0px 15px 300px;
+    margin: 120px 0px 15px 350px;
     display: flex;
     justify-content: flex-end;
     min-width: 2120px;
@@ -87,11 +87,10 @@
         right: 100px;
         width: 400px;
         height: 500px;
-        margin-left: 40px;
+        margin-left: 10px;
         .card{
             margin-left: 90px;
             &:nth-child(3){
-                margin-left: 180px;
             }
         }
     }
