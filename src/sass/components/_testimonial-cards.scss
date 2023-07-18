@@ -96,7 +96,7 @@
     }
 }
 
-@media (max-width:$viewport-xsm) {
+@media (max-width:339px) {
     .slider::after {
         width: 100%;
     }
@@ -108,7 +108,7 @@
     }
 }
 
-@media (min-width:$viewport-sm) and (max-width:$viewport-md) {
+@media (min-width:481px) and (max-width:660px) {
     .slider::after {
         width: 100%;
     }
@@ -130,7 +130,7 @@
     }
 }
 
-@media (max-width:$viewport-md-1) {
+@media (max-width:660px) {
     .slider::after {
         width: 100%;
     }

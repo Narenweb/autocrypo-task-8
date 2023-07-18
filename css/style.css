@@ -395,7 +395,7 @@ a {
     right: 60px;
   }
 }
-@media (min-width: 481px) and (max-width: 769px) {
+@media (min-width: 481px) and (max-width: 660px) {
   .slider::after {
     width: 100%;
   }
@@ -514,6 +514,7 @@ header .navbar .nav-last li:nth-child(1) {
   .nav-active {
     background-color: #313a5a;
     height: 100vh;
+    z-index: 1;
   }
   .nav-active .nav-center li a {
     position: relative;
@@ -590,6 +591,7 @@ header .navbar .nav-last li:nth-child(1) {
   .nav-active {
     background-color: #313a5a;
     height: 100vh;
+    z-index: 2;
   }
   .nav-active .nav-center li a {
     position: relative;

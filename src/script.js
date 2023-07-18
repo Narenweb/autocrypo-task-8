@@ -1,26 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navbar = document.getElementById('navbar');
-    const phoneImg = document.querySelector('.phone-img');
-
     window.addEventListener('scroll', () => {
-        const position = window.scrollY;
-        if (position) {
-            navbar.classList.add('fixed-navbar');
-            phoneImg.classList.remove('img-hidden');
-            navbar.classList.remove('nav-active');
-            hamburger.classList.remove('active-close');
-        }
-        else {
-            navbar.classList.remove('fixed-navbar');
-
-
-        }
+        navbar.classList.add('fixed-navbar');
     })
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active-close');
         navbar.classList.toggle('nav-active');
-        phoneImg.classList.add('img-hidden');
     })
 
     //Slider Functionality
@@ -37,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let DotNumber = event.target.dataset.number;
             console.log(DotNumber);
             if (DotNumber !== number) {
-                const pixels = -(card+80) * DotNumber;
+                const pixels = -(card + 80) * DotNumber;
                 card_container.style.transform = 'translateX(' + pixels + 'px)';
 
                 const activeCards = document.querySelectorAll('.active');
@@ -56,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (activeCard !== null && activedot !== null) {
                     activeCard.classList.add("active");
                     activedot.classList.add("activedot");
-                    number= DotNumber;
+                    number = DotNumber;
                 }
 
             }

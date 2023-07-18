@@ -5,8 +5,11 @@ $primary-text-color:#5b6c94;
 $tertiary-color:#f1fff8;
 $dark-blue:#031d5b;
 $base-font-size: 16px;
-$viewport-xsm:339px;
-$viewport-sm:481px;
-$viewport-sm-2:565px;
-$viewport-md-1:660px;
-$viewport-md:769px;
+
+$breakpoints:(
+    "viewport-xsm":395px,
+    "viewport-sm":480px,
+    "viewport-md":769px,
+    "viewport-lg":930px,
+    "viewport-xl":1070px,
+);
